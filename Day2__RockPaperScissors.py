@@ -1,10 +1,10 @@
 import pandas as pd
 
-dados = pd.read_csv('input2.txt', delimiter=' ', header = None)
+data = pd.read_csv('input2.txt', delimiter=' ', header = None)
 
 header = ['Opponent','You']
 
-dados.columns = header
+data.columns = header
 
 def condition_1(row):
     if row['Opponent'] == 'A' and row['You'] == 'X':
@@ -46,11 +46,11 @@ def condition_2(row):
     else:
      return 7
 
-dados['points(part1)'] = dados.apply(condition_1, axis=1)
-dados['points(part2)'] = dados.apply(condition_2, axis=1)
+data['points(part1)'] = data.apply(condition_1, axis=1)
+data['points(part2)'] = data.apply(condition_2, axis=1)
 
-TotalPoints_1 = dados['points(part1)'].sum()
-TotalPoints_2 = dados['points(part2)'].sum()
+TotalPoints_1 = data['points(part1)'].sum()
+TotalPoints_2 = data['points(part2)'].sum()
 
 
 print('Total Points(part 1):', TotalPoints_1, '\nTotal Points(part 2):', TotalPoints_2)
