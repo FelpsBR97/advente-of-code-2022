@@ -1,4 +1,5 @@
 import pandas as pd
+
 #import data
 data = pd.read_csv('input3.txt', header = None)
 header = ['all_itens']

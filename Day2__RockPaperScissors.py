@@ -1,11 +1,11 @@
 import pandas as pd
 
+#import data
 data = pd.read_csv('input2.txt', delimiter=' ', header = None)
-
 header = ['Opponent','You']
-
 data.columns = header
 
+#game condition for the first part
 def condition_1(row):
     if row['Opponent'] == 'A' and row['You'] == 'X':
      return 4
@@ -25,7 +25,8 @@ def condition_1(row):
      return 2
     else:
      return 6
-    
+
+#game condition for the second part
 def condition_2(row):
     if row['Opponent'] == 'A' and row['You'] == 'X':
      return 3
@@ -51,6 +52,5 @@ data['points(part2)'] = data.apply(condition_2, axis=1)
 
 TotalPoints_1 = data['points(part1)'].sum()
 TotalPoints_2 = data['points(part2)'].sum()
-
 
 print('Total Points(part 1):', TotalPoints_1, '\nTotal Points(part 2):', TotalPoints_2)
