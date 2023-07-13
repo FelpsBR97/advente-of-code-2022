@@ -5,7 +5,7 @@ data = pd.read_csv('input4.txt', header = None)
 header = ['elf_1','elf_2']
 data.columns = header
 
-#slip the data, for 'a' and 'b' for elf_1 and elf_2
+#split the data, for 'a' and 'b' for elf_1 and elf_2
 data[['a_elf_1','b_elf_1']] = data['elf_1'].str.split('-', expand=True)
 data[['a_elf_2','b_elf_2']] = data['elf_2'].str.split('-', expand=True)
 data.drop(['elf_1','elf_2'], axis=1, inplace=True)
