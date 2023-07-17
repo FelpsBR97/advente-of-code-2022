@@ -21,7 +21,7 @@ def TestChars(i, n):
 def FindMarker(n):
     for i in range(len(characters)-n):
         if TestChars(i, n):
-            print('\nThe marker for a', n,'characters is: ', i + n, '\n')
+            print('\nThe marker for a sequence of', n,'characters is: ', i + n, '\n')
             break
                     
 # ---- part 1 ----
