@@ -59,4 +59,4 @@ for dir in dirs:
     smallest_dir = min(valid_dirs)
 
 print('\n Answer for part 1: ', total, '\n')
-print('\n Answer for part 2: ', smallest_dir, '\n')
+print('\n Answer for part 2: ', smallest_dir, '\n') 
