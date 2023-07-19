@@ -33,7 +33,6 @@ for row in range(1 ,ROWS-1):
                     distance += 1
                     break
 
-            
             tree_scenic_score *= distance
         
         scores.append(tree_scenic_score)
